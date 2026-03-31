@@ -89,7 +89,8 @@
               experience with low-level data handling, reverse engineering concepts, and automation design. I also 
               improved my ability to break down complex systems, test assumptions iteratively, and build solutions 
               that remain robust despite changing underlying conditions.
-            </p>                  
+            </p>
+
                     <div class="gallery main-gallery">
 
                     </div>
@@ -103,10 +104,25 @@
                     
                   </h2>
             <p>
-Since I had very little experience with any software or library I used going into this, I struggled to immediately make progress. Cheat engine was an especially very tough software to grasp. It introduced concepts that I had not touched on in class such as how using Cheat Engine requires an ability to read and understand assembly. A huge obstacle that prevented me from progressing was the Python library, ReadWriteMemory, would not work for addresses that had a higher number than 2^32. Even though this is a big number, the application's RAM usage already exceeded that number so I couldn't read the entire application memory no matter what. The number 2^32 was a dead giveaway that this was most definitely a problem with overflowing integers. Normally this would never be a problem in python, but the package worked by using C to handle the pointer calculations. Since C is a very strict language about typing, the python library would try to reduce the number down to four bytes. The front would be truncated, calculating the address modded by 2^32. Fortunately, I was able to fix the problem by editing the ReadWriteMemory package file, changing the ctype in the read() method from c_uint32 to c_uint64.
-
-  
-            </p>                  
+              Since I had very little experience with any software or library I used going into this, 
+              I struggled to immediately make progress. Cheat engine was an especially very tough 
+              software to grasp. It introduced concepts that I had not touched on in class such as 
+              how using Cheat Engine requires an ability to read and understand assembly. A huge 
+              obstacle that prevented me from progressing was the Python library, ReadWriteMemory, 
+              would not work for addresses that had a higher number than 2^32. Even though this is a 
+              big number, the application's RAM usage already exceeded that number so I couldn't read 
+              the entire application memory no matter what. The number 2^32 was a dead giveaway that 
+              this was most definitely a problem with overflowing integers. Normally this would never 
+              be a problem in python, but the package worked by using C to handle the pointer 
+              calculations. Since C is a very strict language about typing, the python library would 
+              try to reduce the number down to four bytes. The front would be truncated, calculating 
+              the address modded by 2^32. Fortunately, I was able to fix the problem by editing the 
+              ReadWriteMemory package file, changing the ctype in the read() method from c_uint32 to 
+              c_uint64.
+            </p>        
+            <p>
+              asdas
+            </p>
                     <div class="gallery main-gallery">
 
                     </div>
