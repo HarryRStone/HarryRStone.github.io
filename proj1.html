@@ -115,7 +115,7 @@
               the pointer calculations. Since C is a very strict language about typing, the python library 
               would try to reduce the number down to four bytes. The front would be truncated, calculating 
               the address modded by 2^32. Fortunately, I was able to fix the problem by editting the 
-              ReadWriteMemory package file, changing the ctype from 
+              ReadWriteMemory package file, changing the ctype in the read() method from c_uint32 to c_uint64.
   
             </p>                  
                     <div class="gallery main-gallery">
